@@ -4,8 +4,6 @@ Configured to deploy a TensorFlow model to AWS Lambda using the Serverless frame
 
 by: Mike Moritz
 
-updated by: Andreas Merentitis (Ubuntu 20.04 and py36) 
-
 More info here:  [https://coderecipe.ai/architectures/16924675](https://coderecipe.ai/architectures/16924675)
 
 ### Prerequisites
@@ -45,4 +43,6 @@ cd tf-lambda
 npm install
 
 sudo serverless deploy --stage dev
+
+sudo serverless remove --stage dev 
 ```
