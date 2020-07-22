@@ -27,7 +27,7 @@ Make sure you have AWS access key and secrete keys setup locally, following this
 ### Download the code locally
 
 ```  
-sudo serverless create --template-url https://github.com/AndreasMerentitis/TfLambdaDemo --path tf-lambda
+serverless create --template-url https://github.com/AndreasMerentitis/TfLambdaDemo --path tf-lambda
 ```
 
 ### Update S3 bucket to unique name
