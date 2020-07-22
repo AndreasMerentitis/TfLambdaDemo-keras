@@ -4,6 +4,8 @@ Configured to deploy a TensorFlow model to AWS Lambda using the Serverless frame
 
 by: Mike Moritz
 
+updates by: Andreas Merentitis (ubuntu 20.04, py36)
+
 More info here:  [https://coderecipe.ai/architectures/16924675](https://coderecipe.ai/architectures/16924675)
 
 ### Prerequisites
@@ -25,7 +27,7 @@ Make sure you have AWS access key and secrete keys setup locally, following this
 ### Download the code locally
 
 ```  
-sudo serverless create --template-url https://github.com/mikepm35/TfLambdaDemo --path tf-lambda
+sudo serverless create --template-url https://github.com/AndreasMerentitis/TfLambdaDemo --path tf-lambda
 ```
 
 ### Update S3 bucket to unique name
@@ -46,3 +48,12 @@ sudo serverless deploy --stage dev
 
 sudo serverless remove --stage dev 
 ```
+
+
+
+
+
+
+
+
+
