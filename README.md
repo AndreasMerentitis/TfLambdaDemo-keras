@@ -8,6 +8,8 @@ updates by: Andreas Merentitis (ubuntu 20.04, py36)
 
 More info here:  [https://coderecipe.ai/architectures/16924675](https://coderecipe.ai/architectures/16924675)
 
+![relative path 1](/model_train.png?raw=true "model_train.png")
+
 ### Prerequisites
 
 #### Setup serverless
@@ -62,9 +64,6 @@ curl -X POST https://u881f1756g.execute-api.eu-west-1.amazonaws.com/dev/infer -d
 
 sudo serverless remove --stage dev 
 ```
-
-![relative path 1](/model_train.png?raw=true "model_train.png")
-
 
 # Using data and extending the basic idea from these sources:
 * https://github.com/mikepm35/TfLambdaDemo
