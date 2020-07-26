@@ -6,8 +6,7 @@ by: Mike Moritz
 
 updates by: Andreas Merentitis (ubuntu 20.04, py36)
 
-More info here:  [https://coderecipe.ai/architectures/16924675](https://coderecipe.ai/architectures/16924675)
-
+![relative path 6](/bluriness_pie.png?raw=true "bluriness_pie.png")
 ![relative path 1](/model_train.png?raw=true "model_train.png")
 
 ### Prerequisites
