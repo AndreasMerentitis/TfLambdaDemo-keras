@@ -63,6 +63,8 @@ curl -X POST https://u881f1756g.execute-api.eu-west-1.amazonaws.com/dev/infer -d
 sudo serverless remove --stage dev 
 ```
 
+![relative path 1](/model_train.png?raw=true "model_train.png")
+
 
 # Using data and extending the basic idea from these sources:
 * https://github.com/mikepm35/TfLambdaDemo
