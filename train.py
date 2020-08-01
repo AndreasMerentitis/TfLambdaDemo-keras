@@ -12,22 +12,40 @@ import tarfile
 import boto3
 import tensorflow as tf
 
+import tempfile
+import urllib.request
+train_file = tempfile.NamedTemporaryFile()
+test_file = tempfile.NamedTemporaryFile()
+urllib.request.urlretrieve("https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data", train_file.name)
+urllib.request.urlretrieve("https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test", test_file.name)
+
 import census_data
 
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.WARNING)
+
 FILE_DIR = '/tmp/'
-#FILE_DIR = './'
+BUCKET = os.environ['BUCKET']
 
-#BUCKET = os.environ['BUCKET']
-BUCKET = 'zappa-ml-1'
-
+COLUMNS = ["age", "workclass", "fnlwgt", "education", "education_num",
+           "marital_status", "occupation", "relationship", "race", "gender",
+           "capital_gain", "capital_loss", "hours_per_week", "native_country",
+           "income_bracket"]
 
 def trainHandler(event, context):
     time_start = time.time()
 
-    body = json.loads(event.get('body'))
+    #body = json.loads(event.get('body'))
 
     # Read in epoch
-    epoch_files = body['epoch']
+    #epoch_files = body['epoch']
+    epoch_files = ''
+    
+    logging.warning('first path is %s', os.path.join(epoch_files,census_data.TRAINING_FILE))
+    
+    logging.warning('second path is %s', FILE_DIR+census_data.TRAINING_FILE)
 
     # Download files from S3
     boto3.Session(

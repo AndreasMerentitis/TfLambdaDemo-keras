@@ -12,6 +12,11 @@ import tensorflow as tf
 
 import census_data
 
+import logging
+
+logger = logging.getLogger()
+logger.setLevel(logging.WARNING)
+
 FILE_DIR = '/tmp/'
 BUCKET = os.environ['BUCKET']
 
@@ -22,6 +27,11 @@ def uploadHandler(event, context):
 
     # Upload files to S3
     epoch_now = str(int(time.time()))
+    epoch_now = ''
+    
+    logging.warning('first path is %s', os.path.join(epoch_now,census_data.TRAINING_FILE))
+    
+    logging.warning('second path is %s', FILE_DIR+census_data.TRAINING_FILE)
 
     boto3.Session(
         ).resource('s3'

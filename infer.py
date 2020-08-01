@@ -28,9 +28,7 @@ logger.setLevel(logging.WARNING)
 FILE_DIR = '/tmp/'
 S3_MODEL_DIR = ''
 
-#BUCKET = os.environ['BUCKET']
-BUCKET = 'serverless-ml-1'
-
+BUCKET = os.environ['BUCKET']
 
 def _easy_input_function_keras(data_dict):
     transform_needed = [False,
