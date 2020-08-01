@@ -64,6 +64,12 @@ aws s3 cp model.tar.gz s3://serverless-ml-1/ --grants read=uri=http://acs.amazon
 
 curl -X POST https://u881f1756g.execute-api.eu-west-1.amazonaws.com/dev/infer -d '{"epoch": "1556995767", "input": {"age": ["34"], "workclass": ["Private"], "fnlwgt": ["357145"], "education": ["Bachelors"], "education_num": ["13"], "marital_status": ["Married-civ-spouse"], "occupation": ["Prof-specialty"], "relationship": ["Wife"], "race": ["White"], "gender": ["Female"], "capital_gain": ["0"], "capital_loss": ["0"], "hours_per_week": ["50"], "native_country": ["United-States"], "income_bracket": [">50K"]}}'
 
+```
+
+### Clean up (remove deployment) 
+
+
+```
 aws s3 rm s3://serverless-ml-1/model.tar.gz
 
 sudo serverless remove --stage dev 
