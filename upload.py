@@ -26,7 +26,7 @@ def uploadHandler(event, context):
     census_data.download(FILE_DIR)
 
     # Upload files to S3
-    epoch_now = str(int(time.time()))
+    time_now = str(int(time.time()))
     epoch_now = ''
     
     logging.warning('first path is %s', os.path.join(epoch_now,census_data.TRAINING_FILE))
@@ -47,7 +47,7 @@ def uploadHandler(event, context):
 
     response = {
         "statusCode": 200,
-        "body": json.dumps({'epoch': epoch_now})
+        "body": json.dumps({'epoch': time_now})
     }
 
     return response
