@@ -1,6 +1,6 @@
-# Serverless Machine Learning on AWS Lambda with TensorFlow
+# Serverless Machine Learning inference on AWS Lambda with TensorFlow and keras 
 
-Configured to deploy a TensorFlow model to AWS Lambda using the Serverless framework.
+Configured to deploy a TensorFlow model (trained locally with keras) to AWS Lambda using the Serverless framework.
 
 by: Mike Moritz
 
