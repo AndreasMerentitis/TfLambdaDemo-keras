@@ -1,6 +1,7 @@
 # Serverless Machine Learning inference on AWS Lambda with TensorFlow and keras 
 
-Configured to deploy a TensorFlow model (trained locally with keras) to AWS Lambda using the Serverless framework.
+Configured to deploy a TensorFlow model to AWS Lambda using the Serverless framework.
+The model is a custom one trained locally with keras. 
 
 by: Mike Moritz
 
@@ -44,7 +45,7 @@ In serverless.yml:
 ```
 source activate py36
 
-python train_new_model.py 
+python local_train_new_model.py 
 
 tar -zcvf model.tar.gz model_ML.h5
 ```
