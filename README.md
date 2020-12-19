@@ -1,4 +1,4 @@
-# Serverless Machine Learning inference on AWS Lambda with TensorFlow and keras 
+# Serverless Machine Learning inference on AWS Lambda with TensorFlow and keras (custom model)
 
 Configured to deploy a TensorFlow model to AWS Lambda using the Serverless framework.
 The model is a custom one trained locally with keras. 
