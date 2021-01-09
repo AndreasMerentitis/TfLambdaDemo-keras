@@ -39,6 +39,12 @@ In serverless.yml:
     BUCKET: <your_unique_bucket_name> 
 ```
 
+### Check the file syntax for any files changed 
+```
+pyflakes infer.py
+
+```
+We can ignore the warning about not using 'unzip_requirements' as its needed to set the requirements for lamda 
 
 ### Train the model from scratch
 
