@@ -61,7 +61,7 @@ tar -zcvf model.tar.gz model_ML.h5
 
 
 ```
-cd tf-lambda
+cd tf-lambdakeras
 
 npm install
 
